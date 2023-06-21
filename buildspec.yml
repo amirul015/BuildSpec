@@ -8,6 +8,8 @@ phases:
   build:
     commands:
       - cdk synth
+      - cdk bootstrap aws://748389823986/us-east-1
+      - cdk deploy --force  
 artifacts:
   files:
     - '**/*'
