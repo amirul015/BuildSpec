@@ -4,6 +4,7 @@ phases:
   install:
     commands:
       - source .venv/bin/activate
+      - sudo yum install pip -y  
       - python -m pip install -r requirements.txt  
   build:
     commands:
