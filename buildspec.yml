@@ -3,8 +3,7 @@ version: 0.2
 phases:
   install:
     commands:
-      - source .venv/bin/activate
-      - sudo yum install pip -y  
+      - source .venv/bin/activate  
       - python -m pip install -r requirements.txt  
   build:
     commands:
