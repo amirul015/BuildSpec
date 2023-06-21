@@ -9,11 +9,9 @@ phases:
       - source .venv/bin/activate  
       - pip install -r requirements.txt
       - python --version
-      - pip --version
-  pre_build:
-    commands:
-      - echo Installing source NPM dependencies...
-      - npm install      
+      - curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.3/install.sh | bash
+      - . ~/.nvm/nvm.sh
+      - nvm install --lts  
   build:
     commands:
       - cdk synth
