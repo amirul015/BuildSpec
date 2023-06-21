@@ -3,7 +3,8 @@ version: 0.2
 phases:
   install:
     commands:
-      - echo "cdk --version"  
+      - sudo yum install npm -y
+      - aws --version  
       - sudo yum install python3 pip3 -y
       - sudo pip3 install --upgrade pip 
       - source .venv/bin/activate  
