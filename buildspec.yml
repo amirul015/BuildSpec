@@ -4,6 +4,8 @@ phases:
   install:
     commands:  
       - aws --version  
+      - which python
+      - which curl  
       - sudo yum install python3 pip3 -y
       - sudo pip3 install --upgrade pip 
       - source .venv/bin/activate  
