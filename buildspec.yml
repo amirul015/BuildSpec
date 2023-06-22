@@ -10,7 +10,7 @@ phases:
   pre_build:
     commands:
       #install dependencies
-      - . "$NVM_DIR/nvm.sh" && nvm install 18.16.1 && echo "node installed by arun"
+      - . "$NVM_DIR/nvm.sh" && nvm install 18.12.1 && echo "node installed by arun"
       - echo Installing node...
       #- nvm install 18.16.1
       - echo Installing npm...
