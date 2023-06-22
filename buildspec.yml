@@ -5,6 +5,7 @@ phases:
     commands:  
       - aws --version  
       - which python
+      - $HOME  
       - which curl  
       - sudo yum install python3 pip3 -y
       - sudo pip3 install --upgrade pip
