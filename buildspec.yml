@@ -1,25 +1,25 @@
 version: 0.2
-
 phases:
   install:
-    commands:  
-      - aws --version  
-      - which python
-      - $HOME  
-      - which curl  
-      - sudo yum install python3 pip3 -y
-      - sudo pip3 install --upgrade pip
-      - curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.3/install.sh | bash
-      - ~/.nvm
-      - nvm install --lts  
-      - source .venv/bin/activate  
-      - pip install -r requirements.txt
-      - python --version  
+    commands:
+      - echo Installing nvm...
+      - curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.35.3/install.sh | bash
+      - export NVM_DIR="$HOME/.nvm"
+      - '[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"'
+      - '[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"'
+  pre_build:
+    commands:
+      #install dependencies
+      - . "$NVM_DIR/nvm.sh" && nvm install 12.18.3 && echo "node installed by arun"
+      - echo Installing node...
+      #- nvm install 12.18.3
+      - echo Installing npm...
+      - npm install
   build:
     commands:
-      - cdk synth
-      - cdk bootstrap aws://748389823986/us-east-1
-      - cdk deploy --force  
-artifacts:
-  files:
-    - '**/*'
+      #build
+      - echo building...
+      - npm run generate
+cache:
+  paths:
+    - node_modules/**/*
