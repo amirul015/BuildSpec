@@ -7,13 +7,14 @@ phases:
       - which python
       - which curl  
       - sudo yum install python3 pip3 -y
-      - sudo pip3 install --upgrade pip 
-      - source .venv/bin/activate  
-      - pip install -r requirements.txt
-      - python --version
+      - sudo pip3 install --upgrade pip
+      - touch ~/.bash_profile
       - curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.3/install.sh | bash
       - . ~/.nvm/nvm.sh
       - nvm install --lts  
+      - source .venv/bin/activate  
+      - pip install -r requirements.txt
+      - python --version  
   build:
     commands:
       - cdk synth
