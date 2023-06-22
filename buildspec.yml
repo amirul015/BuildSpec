@@ -7,4 +7,6 @@ phases:
       - n 18
   build:
     commands:
-      - echo "Build commands go here
+      - echo "Build commands go here"
+      - npm install
+
