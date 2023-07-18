@@ -3,7 +3,7 @@ version: 0.2
 phases:
   install:
     commands:
-      - echo "Installing Node.js 18"
+      - echo "Installing Node.js"
       - n 18
   build:
     commands:
