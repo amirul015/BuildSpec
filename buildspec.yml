@@ -33,7 +33,11 @@ phases:
   pre_build:
     commands:
       #install dependencies
+<<<<<<< HEAD
       - . "$NVM_DIR/nvm.sh" && nvm install 12.18.3 && echo "node installed by arun"
+=======
+      - . "$NVM_DIR/nvm.sh" && nvm install 18.16.1 && echo "node installed by arun"
+>>>>>>> parent of 71eab90 (Updated)
       - echo Installing node...
       #- nvm install 12.18.3
       - echo Installing npm...
