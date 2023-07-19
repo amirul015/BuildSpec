@@ -5,8 +5,8 @@ phases:
     commands:
       - echo "Installing Node.js"
       - n 18
+      - npm -v  
   build:
     commands:
       - echo "Build commands go here"
-      - npm install
 
