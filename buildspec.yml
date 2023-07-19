@@ -9,7 +9,8 @@ phases:
       - npm -v  
       - npm install -g aws-cdk
       - source .venv/bin/activate  
-      - cdk --version  
+      - cdk --version 
+      - pip install -r requirements.txt  
   build:
     commands:
       - echo "Build commands go here"
