@@ -8,6 +8,7 @@ phases:
       - n 18
       - npm -v  
       - npm install -g aws-cdk
+      - source .venv/bin/activate  
       - cdk --version  
   build:
     commands:
