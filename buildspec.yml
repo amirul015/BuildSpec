@@ -5,7 +5,6 @@ phases:
     commands:
       - echo "Installing Node.js"
       - aws --version
-      - cdk -v
       - n 18
       - npm -v  
       - npm install -g aws-cdk  
