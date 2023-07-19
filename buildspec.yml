@@ -5,10 +5,10 @@ phases:
     commands:
       - echo "Installing Node.js"
       - aws --version
-      - sudo yum install cdk -y
       - cdk -v
       - n 18
       - npm -v  
+      - npm install -g aws-cdk  
   build:
     commands:
       - echo "Build commands go here"
