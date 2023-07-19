@@ -5,7 +5,7 @@ phases:
     commands:
       - echo "Installing Node.js"
       - aws --version
-      - which python
+      - sudo yum install cdk -y
       - cdk -v
       - n 18
       - npm -v  
