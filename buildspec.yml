@@ -8,7 +8,7 @@ phases:
       - n 18
       - npm -v  
       - npm install -g aws-cdk
-      - cdk -v  
+      - cdk --version  
   build:
     commands:
       - echo "Build commands go here"
