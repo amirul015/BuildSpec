@@ -11,7 +11,7 @@ phases:
       - source .venv/bin/activate  
       - cdk --version 
       - pip install -r requirements.txt
-      - npm run build  
+      - cdk synth  
   build:
     commands:
       - echo "Build commands go here"  
