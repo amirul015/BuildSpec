@@ -1,11 +1,19 @@
 version: 0.2
+
 phases:
   install:
-    runtime-versions:
-      nodejs: 14
     commands:
-      - n 16
-  pre_build:    
+      - echo "Installing Node.js"
+      - aws --version
+      - n 18
+      - npm -v
+      - npm install -g aws-cdk
+      - source .venv/bin/activate
+      - cdk --version
+      - pip install -r requirements.txt
+      - cdk synth
+      - cdk bootstrap aws://079774713790/us-east-1
+      - cdk deploy
+  build:
     commands:
-      - echo Node Installed
-
+      - echo "Build commands go here"
