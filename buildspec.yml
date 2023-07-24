@@ -2,8 +2,9 @@ version: 0.2
 
 phases:
   install:
+    runtime-versions:
+      nodejs: latest
+  pre_build:    
     commands:
-      - echo "Installing Node.js"
-      - aws --version
-      - n 18
-      - npm -v
+      - echo "Node Installed"
+
