@@ -2,9 +2,9 @@ version: 0.2
 phases:
   install:
     runtime-versions:
-      nodejs: 18
+      nodejs: 14
     commands:
-      - echo Getting Started    
+      - n 16
   pre_build:    
     commands:
       - echo Node Installed
