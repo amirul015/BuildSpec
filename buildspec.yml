@@ -17,3 +17,8 @@ phases:
   build:
     commands:
       - echo "Build commands go here"
+
+artifacts:
+  files:
+  - '**/*'
+  name: Output_file   
