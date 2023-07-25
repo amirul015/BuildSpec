@@ -12,7 +12,7 @@ phases:
       - cdk --version
       - pip install -r requirements.txt
       - cdk synth
-      - cdk bootstrap aws://079774713790/us-east-1
+      - cdk bootstrap aws://079774713790/us-east-1 --force
       - cdk deploy
   build:
     commands:
